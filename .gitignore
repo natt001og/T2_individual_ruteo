@@ -1,0 +1,30 @@
+cat > .gitignore << 'EOF'
+# Entornos virtuales
+.venv/
+venv/
+env/
+
+# Python
+__pycache__/
+*.py[cod]
+*.log
+
+# Variables de entorno y credenciales
+.env
+.env.*
+!.env.example
+
+# Archivos temporales
+.DS_Store
+*.swp
+*.tmp
+
+# Respaldos locales de bases de datos
+*.dump
+*.backup
+respaldo_actual.sql
+
+# Configuración de editores
+.vscode/
+.idea/
+EOF

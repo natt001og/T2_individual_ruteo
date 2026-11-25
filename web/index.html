@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Resiliencia de la infraestructura de Internet - Chile 2010</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <header>
+    <div>
+      <h1>Resiliencia de la infraestructura de Internet</h1>
+      <p>Red integrada de Chile · Terremoto del Maule, 27 de febrero de 2010 (Mw 8.8)</p>
+    </div>
+    <div class="header-tag">PostGIS · pgRouting · Leaflet</div>
+  </header>
+  <main>
+    <aside id="panel">
+      <h2>Resumen de la red</h2>
+      <div class="stats">
+        <div><strong id="n-edges">—</strong><span>Aristas</span></div>
+        <div><strong id="n-nodes">—</strong><span>Nodos clave</span></div>
+        <div><strong id="n-covered">—</strong><span>Con PGA</span></div>
+        <div><strong id="n-uncovered">—</strong><span>Sin estimación</span></div>
+      </div>
+      <h2>ATTR calculado</h2>
+      <div id="attr-results" class="attr-results">Cargando resultados…</div>
+      <h2>Capas del mapa</h2>
+      <p class="hint">Activa o desactiva las capas desde el control ubicado en el mapa.</p>
+      <h2>Interpretación</h2>
+      <p class="hint">El color de los enlaces representa el nivel de riesgo estimado. Los enlaces grises están fuera de la cobertura útil del ShakeMap y no tienen una probabilidad estimada.</p>
+      <p class="hint">Las líneas discontinuas representan infraestructura sintética o hipotética. No implican tendidos de fibra confirmados.</p>
+    </aside>
+    <section id="map-wrap">
+      <div id="loading">Cargando infraestructura y nodos…</div>
+      <div id="map"></div>
+    </section>
+  </main>
+  <footer>Fuente sísmica: USGS ShakeMap del terremoto del Maule 2010. Las capas sintéticas y la fragilidad simplificada representan supuestos del escenario de modelamiento.</footer>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="/app.js"></script>
+</body>
+</html>
